@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>checkbox</title>
+    <style>
+        
+        input {
+            padding: 5px;
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+
+        .btn {
+            padding: 9px;
+            font-size: 20px;
+        }
+
+        th {
+            border: 1px solid black;
+            padding: 7px;
+        }
+
+        table {
+            border: 1px solid black;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 7px;
+        }
+    </style>
+</head>
+
+<body>
+    
+        <div style="display: flex;justify-content: center;flex-direction: column;align-items: center;" >
+            <div style="margin-top: 5pc;font-size:30px;">
+                <label for="fname">Full Name:</label><br>
+                <input type="text"  id="fname" name="fname" size="40px"/>
+            </div>
+            <div style="font-size:30px;margin-top: 1pc;">
+                <label for="email">Email:</label><br>
+                <input type="text"   id="email" name="email" size="40px" />
+            </div>
+            <div style="margin-top: 1pc;font-size:30px;">
+                <label for="password">Password:</label><br>
+                <input type="password"   id="pwd" name="pwd" size="40px" />
+            </div>
+            
+            <div style="display: flex;justify-content: center;margin-top: 35px;">
+                <button onclick="myfunction()" class="btn">Submit</button>
+            </div>
+        </div>
+        <div id="records"></div>
+        <div
+            style="display: flex;justify-content: center;align-items: center;gap: 40px; margin-top: 6pc;font-size: 25px;">
+            <div>
+                <table>
+                    <thead>
+                        <th>Full Name:</th>
+                        <th>Email:</th>
+                        <th>Password:</th>
+                        <th id="cbox">
+                            <input style="font-size: 30px;" type="checkbox" class="lang" id=" checkbox" name="checkbox" onchange="checkAll(this)">
+                        </th>
+                    </thead>
+                    <tbody id="tbl1"></tbody>
+                </table>
+            </div>
+        </div>
+        <script src="./checkbox.js"></script>
+</body>
+
+</html>
